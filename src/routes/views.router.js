@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { Router } from 'express'
 import Product from '../models/product.model.js'
 import Cart from '../models/cart.model.js'
@@ -36,3 +37,19 @@ router.get('/carts/:cid', async (req, res) => {
 })
 
 export default router
+=======
+import { Router } from "express";
+import { products } from "../products.js";
+
+const router = Router();
+
+router.get("/", (req, res) => {
+  res.render("home", { products });
+});
+
+router.get("/realtimeproducts", (req, res) => {
+  res.render("realTimeProducts", { products });
+});
+
+export default router;
+>>>>>>> a8a46ca6cd209526d9d5dd8758d36ffcd32597a8
